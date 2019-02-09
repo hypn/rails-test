@@ -14,6 +14,7 @@
     <% @cartridges.each do |cartridge| %>
       <tr>
         <td><%= cartridge.title %></td>
+        <td><%= cartridge.colour %></td>
         <td><%= link_to 'Show', cartridge %></td>
         <td><%= link_to 'Edit', edit_cartridge_path(cartridge) %></td>
         <td><%= link_to 'Destroy', cartridge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
