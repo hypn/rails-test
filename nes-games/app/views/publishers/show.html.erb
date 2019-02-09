@@ -4,6 +4,14 @@
   <strong>Name:</strong>
   <%= @publisher.name %>
 </p>
+<p>
+  <strong>Cartridges:</strong><br />
+  <ul>
+  <% @publisher.cartridges.each do |cartridge| %>
+    <li><%= cartridge.title %></li>
+  <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_publisher_path(@publisher) %> |
 <%= link_to 'Back', publishers_path %>
