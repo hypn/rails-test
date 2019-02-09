@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190209155826) do
+ActiveRecord::Schema.define(version: 20190209203700) do
 
   create_table "cartridges", force: :cascade do |t|
     t.string   "title"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "colour"
+    t.integer  "publisher_id"
+  end
+
+  create_table "publishers", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "colour"
   end
 
 end
