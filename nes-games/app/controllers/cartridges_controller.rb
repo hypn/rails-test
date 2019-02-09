@@ -69,6 +69,6 @@ class CartridgesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cartridge_params
-      params.require(:cartridge).permit(:title, :colour)
+      params.require(:cartridge).permit(:title, :colour, :publisher_id)
     end
 end

@@ -19,6 +19,11 @@
     <%= f.label :colour %><br>
     <%= f.text_field :colour %>
   </div>
+  <div class="field">
+    <%= f.label :publisher_id %><br>
+    <%= f.collection_select(:publisher_id, Publisher.all, :id, :name, :include_blank => true ) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
