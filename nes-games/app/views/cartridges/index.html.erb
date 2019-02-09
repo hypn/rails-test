@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cartridges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cartridges.each do |cartridge| %>
+      <tr>
+        <td><%= cartridge.title %></td>
+        <td><%= link_to 'Show', cartridge %></td>
+        <td><%= link_to 'Edit', edit_cartridge_path(cartridge) %></td>
+        <td><%= link_to 'Destroy', cartridge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cartridge', new_cartridge_path %>
